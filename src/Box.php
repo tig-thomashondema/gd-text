@@ -265,7 +265,7 @@ class Box
             $box = $this->calculateBox($line);
             switch ($this->alignX) {
                 case HorizontalAlignment::Center:
-                    $xAlign = ($this->box->getWidth() / 2) - $box->getWidth();
+                    $xAlign = ($this->box->getWidth() - $box->getWidth()) / 2;
                     break;
                 case HorizontalAlignment::Right:
                     $xAlign = ($this->box->getWidth() - $box->getWidth());
